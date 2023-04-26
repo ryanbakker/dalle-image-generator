@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
   return (
-    <header>
+    <header className="flex p-5 justify-between sticky top-0 bg-white z-50 shadow-md">
       {/* Left */}
-      <div>
+      <div className="flex space-x-2 items-center">
         <Image
           src="https://links.papareact.com/4t3"
           alt="Logo"
@@ -24,7 +25,20 @@ function Header() {
       </div>
 
       {/* Right */}
-      <div></div>
+      <div className="flex text-xs md:text-base divide-x items-center text-gray-500">
+        <Link
+          href="https://www.ryanbakker.nz"
+          className="px-2 font-light text-right"
+        >
+          My Website
+        </Link>
+        <Link
+          href="https://github.com/ryanbakkerNZ/dalle-image-generator"
+          className="px-2 font-light"
+        >
+          GitHub REPO
+        </Link>
+      </div>
     </header>
   );
 }
